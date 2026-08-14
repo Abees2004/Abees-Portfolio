@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-900: #0c4a6e;
+
+  --color-dark-bg: #090d16;
+  --color-dark-card: #111827;
+  --color-dark-border: #1f2937;
+  --color-dark-subtle: #374151;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-grid-pattern {
+    background-size: 30px 30px;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.glass-panel {
+    background: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hover interaction for project and skill cards */
+.project-card, .skill-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover, .skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 12px 30px -10px rgba(14, 165, 233, 0.25);
+}
+
+.img-zoom-container {
+    overflow: hidden;
+}
+.img-zoom-container img {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (hover: hover) {
+    .project-card:hover .img-zoom-container img,
+    .case-study-card:hover .img-zoom-container img {
+        transform: scale(1.03);
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .project-card:hover .img-zoom-container img {
+        transform: none !important;
+    }
+}
+
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Hide everything except the resume print area */
+    header, footer, nav, .no-print,
+    #home, #about, #skills, #experience, #projects,
+    #case-studies, #education, #contact,
+    .bg-grid-pattern::before, .bg-grid-pattern::after {
+        display: none !important;
+    }
+
+    /* Show only the resume section */
+    #resume {
+        display: block !important;
+        background: white !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .print-area {
+        background: white !important;
+        color: black !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 20px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+    }
+
+    .print-area * {
+        color: black !important;
+        border-color: #ddd !important;
+        background: transparent !important;
+    }
+
+    .print-area h1, .print-area h3, .print-area h4, .print-area strong {
+        color: #111 !important;
+    }
+
+    .print-area code {
+        background: #f3f4f6 !important;
+        color: #111 !important;
+        border: 1px solid #ddd !important;
+    }
+
+    /* Page break control */
+    .print-area > div { page-break-inside: avoid; }
+
+    a[href]::after { content: none !important; }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
