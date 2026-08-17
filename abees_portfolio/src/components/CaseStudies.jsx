@@ -60,13 +60,13 @@ export default function CaseStudies() {
                             GitHub Repository
                         </a>
 
-                        <a href="https://github.com/Abees2004/QuickBite"
+                        {/* <a href="https://github.com/Abees2004/QuickBite"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="px-4 py-2 bg-brand-500/10 hover:bg-brand-500/20 text-brand-400 border border-brand-500/20 font-medium text-xs rounded-lg flex items-center gap-2 transition-colors">
                             <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                             Live Demo
-                        </a>
+                        </a> */}
 
                     </div>
                 </div>
@@ -818,9 +818,9 @@ export default function CaseStudies() {
                 <a href="https://github.com/Abees2004/ServeZone" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs rounded-lg flex items-center gap-2 transition-colors">
                   <Github className="w-4 h-4" /> GitHub Repository
                 </a>
-                <span className="px-4 py-2 bg-slate-800/50 text-slate-500 border border-slate-700/50 font-medium text-xs rounded-lg flex items-center gap-2 cursor-default">
+                {/* <span className="px-4 py-2 bg-slate-800/50 text-slate-500 border border-slate-700/50 font-medium text-xs rounded-lg flex items-center gap-2 cursor-default">
                   <ExternalLink className="w-4 h-4" /> Demo Coming Soon
-                </span>
+                </span> */}
               </div>
             </div>
             <div className="flex flex-wrap gap-2 pt-2">
@@ -1111,9 +1111,9 @@ export default function CaseStudies() {
                 <a href="https://github.com/Abees2004/TurfZone" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs rounded-lg flex items-center gap-2 transition-colors">
                   <Github className="w-4 h-4" /> GitHub Repository
                 </a>
-                <span className="px-4 py-2 bg-slate-800/50 text-slate-500 border border-slate-700/50 font-medium text-xs rounded-lg flex items-center gap-2 cursor-default">
+                {/* <span className="px-4 py-2 bg-slate-800/50 text-slate-500 border border-slate-700/50 font-medium text-xs rounded-lg flex items-center gap-2 cursor-default">
                   <ExternalLink className="w-4 h-4" /> Demo Coming Soon
-                </span>
+                </span> */}
               </div>
             </div>
             <div className="flex flex-wrap gap-2 pt-2">

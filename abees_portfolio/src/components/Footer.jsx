@@ -39,10 +39,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-mono">
+        {/* <div className="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-mono">
           <p>&copy; {new Date().getFullYear()} Abees R. All rights reserved.</p>
           <p className="mt-2 sm:mt-0">Built with React.js &amp; Vite</p>
-        </div>
+        </div> */}
       </div>
     </footer>
   )

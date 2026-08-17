@@ -69,9 +69,7 @@ export default function Projects() {
                   <Github className="w-3.5 h-3.5" /> GitHub
                 </a>
               </div>
-              <a href="#case-studies" className="pt-4 text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1">
-                Case Study <ChevronRight className="w-4 h-4" />
-              </a>
+
               <a 
                 href="#case-studies" 
                 onClick={(e) => {
